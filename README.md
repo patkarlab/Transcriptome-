@@ -20,7 +20,7 @@ Description:
 Library Prep-kit: `Illumina Stranded Total RNA`
 Index Adapter-kit: `IDT-Ilmn RNA UD Indexes Set A Ligation`
 
-7. Index reads: `2 indexes`
+7. Index reads: `2 indexes`.
 Read type: `Paired End`
 Read length: `Read1(151)`, `Index1(10)`, `Index2(10)`, `Read2(151)`
 Override Cycles: They will be set based on the read lenth you entered.
