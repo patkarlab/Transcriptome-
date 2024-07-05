@@ -20,16 +20,16 @@ This has the steps to run DRAGEN RNA pipeline onboard Nextseq 1000 machine.
 * Library Prep-kit: `Illumina Stranded Total RNA`
 * Index Adapter-kit: `IDT-Ilmn RNA UD Indexes Set A Ligation`
 
-7.
+5.
 * Index reads: `2 indexes`.
 * Read type: `Paired End`
 * Read length: `Read1(151)`, `Index1(10)`, `Index2(10)`, `Read2(151)`
 * Override Cycles: They will be set based on the read lenth you entered.
 
-9. Make the Sample sheet by entering `Sample Names` and `Set A kit well position`.
+6. Make the Sample sheet by entering `Sample Names` and `Set A kit well position`.
 The i7 and i5 indexes will be fetched automatically based on the kit you selected. Double check them.
 
-10. Analysis Setting:
+7. Analysis Setting:
 * Barcode Mismatch index1: `0`
 * Barcode Mismatch index2: `0`
 * Fastq compression format: `gzip`
