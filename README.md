@@ -3,7 +3,7 @@ Transcriptomic Analysis using nfcore-rnafusion and Dragen RNA
 
 ## rnafusion pipeline
 Source code for this pipeline is in **run_nextflow_transcriptome.sh** file and it has 2 parts. 
-* The first one is **nf-core/rnafusion (version 2.0.0)**. nf-core/rnafusion is a bioinformatics best-practice analysis pipeline for RNA sequencing analysis, with curated list of tools for detecting and visualizing fusion genes. You can read about this here: [https://github.com/patkarlab/rnafusion](https://github.com/nf-core/rnafusion).
+* The first one is **nf-core/rnafusion (v2.0.0)**. nf-core/rnafusion is a bioinformatics best-practice analysis pipeline for RNA sequencing analysis, with curated list of tools for detecting and visualizing fusion genes. You can read about this here: [https://github.com/patkarlab/rnafusion](https://github.com/nf-core/rnafusion).
 * The second one is `transcriptome.nf` file in the Scripts folder. It merges all the output files of the tools that were used in  **nf-core/rnafusion** and makes a new excel file. 
 * To execute this, make the samplesheet with sample names and name it for eg. `samp.dat`. Then,
 ```
