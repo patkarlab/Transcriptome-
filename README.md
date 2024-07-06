@@ -66,4 +66,4 @@ The i7 and i5 indexes will be fetched automatically based on the kit you selecte
 ```
 ./get_bam {fastq_location}
 ```
-The output files will be created inside a new folder which will be inside the fastq location folder.
+The output files will be created inside a new directory which will be inside the fastq location directory.
