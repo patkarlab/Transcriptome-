@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+fastq_locatn=$1
+reference="/usr/local/illumina/genomes/hg38_alt_aware/DRAGEN/8"
+annotation="/usr/local/illumina/genomes/hg38_alt_aware/genes.gtf.gz"
+
+#Extract a list of fastq files to make a samplesheet
+for i in `ls ${fastq_locatn}/*fastq.gz | sed "s:${fastq_locatn}/::g" | grep -v 'Undetermined*'`
+do
+	basename ${i} .fastq.gz | awk 'BEGIN{FS="_"}{print $1}'
+done | sort | uniq  > ${fastq_locatn}/samples.dat
+
+export JAVA_HOME=/usr/local/illumina/runs/programs/jdk-21.0.3
+export PATH="$JAVA_HOME/bin:$PATH"
+
+
+nextflow -C /usr/local/illumina/runs/scripts/nextflow.config run /usr/local/illumina/runs/scripts/main.nf \
+-entry DBAMFUSIONS \
+--annotation ${annotation} \
+--reference ${reference} \
+--input ${fastq_locatn}/samples.dat \
+--sequences ${fastq_locatn} \
+--output ${fastq_locatn}/bam_fusions \
+-resume -bg \
+-w /usr/local/illumina/runs/trash/work \
