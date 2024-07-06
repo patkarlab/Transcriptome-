@@ -4,7 +4,8 @@ Transcriptomic Analysis using nfcore-rnafusion and Dragen RNA
 ## rnafusion pipeline
 Source code for this pipeline is in **run_nextflow_transcriptome.sh** file and it has 2 parts. 
 * The first one is **nf-core/rnafusion**. nf-core/rnafusion is a bioinformatics best-practice analysis pipeline for RNA sequencing analysis, with curated list of tools for detecting and visualizing fusion genes. You can read about this here: https://github.com/patkarlab/rnafusion.
-* The second one is **transcriptome.nf** file in the Scripts folder. It merges all the output files of the tools that were used in  **nf-core/rnafusion** and makes a new excel file. Then it will convert the co-ordinates of GRCh38 assembly to the co-ordinates of GRCh37 assembly. 
+* The second one is `transcriptome.nf` file in the Scripts folder. It merges all the output files of the tools that were used in  **nf-core/rnafusion** and makes a new excel file. Then it will convert the co-ordinates of `GRCh38` assembly to the co-ordinates of `GRCh37` assembly.
+* 
 
 ## DRAGEN RNA Pipeline - ONBOARD
 
@@ -53,3 +54,6 @@ The i7 and i5 indexes will be fetched automatically based on the kit you selecte
 2. Go to the `Process Management` on the machine. Select your run. Click on Requeue. Select the Samplesheet you just uploaded. Start `Requeue`.
 
 ## DRAGEN RNA Pipeline - On the server
+
+This uses Dragen's command line option to detect fusions. `main.nf` has the nextflow process written for the dragen command for calling fusions, which is in `fastq_in_fusion_out.sh`. `get_bam` is the wrapper script for exectuting this process. 
+To execute this, type `./get_bam {fastq_location}`. The output files will be created inside a new folder which will be inside the fastq location folder.
