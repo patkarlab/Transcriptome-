@@ -61,7 +61,7 @@ The i7 and i5 indexes will be fetched automatically based on the kit you selecte
 
 * This uses Dragen's command line option to detect fusions.
 * `main.nf` has the nextflow process written for the dragen command for calling fusions, which is in `fastq_in_fusion_out.sh`.
-* `get_bam` is the wrapper script for exectuting this process. 
+* `get_bam` is the wrapper script for executing this process. 
 * To execute this
 ```
 ./get_bam {fastq_location}
