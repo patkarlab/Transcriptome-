@@ -45,8 +45,11 @@ The i7 and i5 indexes will be fetched automatically based on the kit you selecte
 * Enable Differential Expression: `No`
 * `Save As Planned`
 
+
 #### Requeuing
 
 1. Now on the Nextseq 1000, log into your account on BaseSpace. Go to the `Planned Runs`. Select your run and download the Samplesheet on the machine.
 
 2. Go to the `Process Management` on the machine. Select your run. Click on Requeue. Select the Samplesheet you just uploaded. Start `Requeue`.
+
+## DRAGEN RNA Pipeline - On the server
